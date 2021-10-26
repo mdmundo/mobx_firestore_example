@@ -29,7 +29,13 @@ abstract class _Token with Store {
 
   @action
   void increment() {
-    value++;
+    firestore
+        .collection('tokens')
+        .add({
+          'user': 'bull',
+        })
+        .then((value) => print("Token Added"))
+        .catchError((error) => print("Failed to add token: $error"));
   }
 
   void dispose() async {
