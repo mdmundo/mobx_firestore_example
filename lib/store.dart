@@ -24,9 +24,6 @@ abstract class _Token with Store {
 
   late final ObservableStream<QuerySnapshot?> tokenStream;
 
-  @observable
-  int value = 0;
-
   @action
   void increment() {
     firestore
