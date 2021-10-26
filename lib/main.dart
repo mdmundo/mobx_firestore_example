@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'How many tokens are on collection:',
+              'How many tokens are there in the collection:',
             ),
             Observer(
               builder: (_) => Text(
