@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:mobx/mobx.dart';
 
 import 'store.dart';
 
@@ -51,10 +52,12 @@ class _MyHomePageState extends State<MyHomePage> {
               'How many docs are there in the collection:',
             ),
             Observer(
-              builder: (_) => Text(
-                '${store.tokenStream.value?.size}',
-                style: Theme.of(context).textTheme.headline4,
-              ),
+              builder: (_) => store.tokenStream.status == StreamStatus.waiting
+                  ? CircularProgressIndicator()
+                  : Text(
+                      '${store.tokenStream.value?.size}',
+                      style: Theme.of(context).textTheme.headline4,
+                    ),
             ),
             const Text(
               'Docs in the collection:',
