@@ -1,0 +1,22 @@
+{
+  "name": "mobx_firestore_example",
+  "version": "0.1.0",
+  "description": "A MobX managed Firestore Database using QuerySnapshot streams and ObservableStream",
+  "scripts": {
+    "build": "flutter build web --base-href //mdmundo.github.io/mobx_firestore_example/",
+    "deploy": "gh-pages -d build/web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdmundo/mobx_firestore_example.git"
+  },
+  "author": "mdmundo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdmundo/mobx_firestore_example/issues"
+  },
+  "homepage": "https://github.com/mdmundo/mobx_firestore_example#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
