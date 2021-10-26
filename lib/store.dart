@@ -30,6 +30,7 @@ abstract class _Token with Store {
         .collection('tokens')
         .add({
           'user': 'bull',
+          'secret': 'JX82',
         })
         .then((value) => print("Token Added"))
         .catchError((error) => print("Failed to add token: $error"));
